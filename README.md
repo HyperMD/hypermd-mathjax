@@ -42,8 +42,6 @@ const editor = HyperMD.fromTextArea(your_textarea)
 
 ### For requirejs (example)
 
-Install the packages: `npm install --save hypermd-mathjax mathjax`
-
 In your HTML:
 
 ```html
@@ -51,12 +49,12 @@ In your HTML:
 
 <!-- **mathjax-config** HERE (see above)  -->
 
-<script src="./node_modules/requirejs/require.js"></script>
-<script src="./node_modules/hypermd/goods/patch-requirejs.js"></script> <!-- 👈 IMPORTANT -->
+<script src="https://cdn.jsdelivr.net/npm/requirejs/require.js"></script> <!-- 👈 RequireJS -->
+<script src="https://cdn.jsdelivr.net/npm/hypermd/goods/patch-requirejs.js"></script> <!-- 👈 IMPORTANT -->
 <script data-main src="main.js"></script>
 ```
 
-As for your `main.js`, [here is an example](./example/requirejs-main.js).
+Here is [an example of `main.js`](./example/requirejs-main.js) and [a live demo](https://hypermd.github.io/hypermd-mathjax/example/).
 
 ### For Plain Browser Env
 
@@ -67,7 +65,7 @@ See the source of [example file](./example/pbe-index.html). Basically, all you n
 ```html
 <!-- **mathjax-config** HERE (see above)  -->
 
-<script src='https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script src='https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/hypermd-mathjax/index.js"></script>
 ```
 
