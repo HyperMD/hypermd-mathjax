@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "path": {
+    "./index": "HyperMD_PowerPack.mathjax"
+  },
+  "external": {
+    "mathjax": "MathJax"
+  },
+  "import": {
+    "hypermd": "./node_modules/hypermd/pbe.manifest.json"
+  }
+}

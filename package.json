@@ -1,0 +1,34 @@
+{
+  "name": "hypermd-mathjax",
+  "description": "In HyperMD, Use MathJax to render TeX formulars",
+  "keywords": [
+    "hypermd",
+    "powerpack",
+    "mathjax"
+  ],
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "laobubu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HyperMD/hypermd-mathjax.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepare": "npm run build",
+    "watch": "tsc -w --module amd",
+    "dev": "hmd-run npm:watch \"hmd-hs -o /example/?_hmd_dev_\"",
+    "build": "tsc && hmd-transpile -o . index.js"
+  },
+  "devDependencies": {
+    "@hypermd/build-tools": "https://github.com/HyperMD/build-tools.git",
+    "codemirror": "^5.40.2",
+    "hypermd": "^0.4.0",
+    "mathjax": "^2.7.5",
+    "typescript": "^3.1.1"
+  },
+  "peerDependencies": {
+    "hypermd": "^0.4.0",
+    "mathjax": "^2.7.0"
+  }
+}
