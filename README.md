@@ -54,7 +54,18 @@ In your HTML:
 <script data-main src="main.js"></script>
 ```
 
-Here is [an example of `main.js`](./example/requirejs-main.js) and [a live demo](https://hypermd.github.io/hypermd-mathjax/example/).
+In your JavaScript, before defining your main entry, don't forget :
+
+```js
+requirejs.config({
+  packages: [
+    { name: 'hypermd-mathjax', main: 'index.js' },
+    { name: 'mathjax', main: 'MathJax.js' },
+  ]
+})
+```
+
+Finally, here is [an example of `main.js`](./example/requirejs-main.js) and [a live demo](https://hypermd.github.io/hypermd-mathjax/example/).
 
 ### For Plain Browser Env
 
